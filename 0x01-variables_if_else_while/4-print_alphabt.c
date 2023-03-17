@@ -32,4 +32,4 @@ chr++;
 }
 putchar('\n');
 return (0);
-
+}
