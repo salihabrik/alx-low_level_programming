@@ -23,5 +23,5 @@ chr++;
 putchar('\n');
 return (0);
 }
-Écrire à
+
 
