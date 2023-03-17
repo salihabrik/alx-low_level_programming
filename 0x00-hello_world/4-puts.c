@@ -1,3 +1,8 @@
+/**
+ * main . function
+ * Description: hello world
+ * Return:Always 0 (success)
+ */
 #include <stdio.h>
 int main(void){
      puts("\"Programming is like building a multilingual puzzle");
