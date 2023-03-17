@@ -1,10 +1,11 @@
 /**
- * main . function
- * Description: hello world
- * Return:Always 0 (success)
+ * main - Entry point
+ * Description: 'program that use put'
+ * Return: Always 0 (Success)
  */
 #include <stdio.h>
-int main(void){
-     puts("\"Programming is like building a multilingual puzzle");
-     return (0);
-
+int main(void)
+{
+puts("\"Programming is like building a multilingual puzzle");
+return (0);
+}
