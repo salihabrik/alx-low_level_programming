@@ -1,15 +1,23 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
- * _islower - Checks if a character is lowercase.
- * @c: The character to be checked.
- *
- * Return: 1 if character is lowercase, 0 otherwise.
+ * print_to_98 - Prints all natural numbers from input to 98,
+ *               in order separated by a comma followed by a space.
+ * @n: The number to begin counting at.
  */
-int _islower(int c)
+void print_to_98(int n)
 {
-	if (c >= 'a' && c <= 'z')
-		return (1);
+	if (n >= 98)
+	{
+		while (n > 98)
+			printf("%d, ", n--);
+		printf("%d\n", n);
+	}
+
 	else
-		return (0);
+	{
+		while (n < 98)
+			printf("%d, ", n++);
+		printf("%d\n", n);
+	}
 }
