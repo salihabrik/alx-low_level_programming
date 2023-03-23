@@ -1,11 +1,6 @@
 #include "main.h"
 #include <stdio.h>
-
 /**
-*  * main - check the code.
-*   *
-*    * Return: Always 0.
-*/
  * _isupper - uppercase letters
  * @c: character to check
  *
@@ -16,14 +11,9 @@ int _isupper(int c)
 int main(void)
 {
 	char c;
-	if (c >= 'A' && c <= 'Z')
+	if (c >= 65 && c <= 90)
 		return (1);
 	else
 		return (0);
 
-	c = 'A';
-	printf("%c: %d\n", c, _isupper(c));
-	c = 'a';
-	printf("%c: %d\n", c, _isupper(c));
-	return (0);
 }
