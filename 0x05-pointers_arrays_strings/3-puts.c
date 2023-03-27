@@ -4,16 +4,14 @@
  * _puts - prints a string
  * @str: the string
  *
- * Return: the length of the string
+ * Return:0
  */
 void _puts(char *str)
 {
-	int i = 0;//str = "I do not fear computers. I fear the lack of them - Isaac Asimov"
-
 	while (str[i] != '\0')
 	{
 		_putchar(str[i]);
 		i++;
 	}
 	_putchar('\n');
-}i
+}
