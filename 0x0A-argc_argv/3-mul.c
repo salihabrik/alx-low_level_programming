@@ -1,18 +1,29 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
- * main - prints all arguments it receives.
+ * main - multiplies two numbers.
  * @argc: argument count
  * @argv: arguments
  *
  * Return: 0
  */
-int main(int argc, char **argv)
+
+int main(int argc, char *argv[])
 {
-	int i;
+	int num1,num2
 
-	for (i = 0; i < argc; i++)
-		printf("%s\n", argv[i]);
+    	if (argc != 3) {
+	printf("Error\n");
+        return 1;
+    }
 
-	return (0);
+	int num1 = atoi(argv[1]);
+	int num2 = atoi(argv[2]);
+
+	int result = num1 * num2;
+
+    	printf("%d\n", result);
+	return 0;
 }
+
