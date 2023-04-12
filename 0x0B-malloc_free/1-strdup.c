@@ -7,7 +7,8 @@
  * @str: string to duplicate
  * Return: pointer to the copied string (Success), Null
  **/
-char *_strdup(char *str); 
+char *_strdup(char *str);
+
 {
 	char *k;
 		unsigned int size;
