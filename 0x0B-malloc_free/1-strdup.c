@@ -10,21 +10,22 @@
 char *_strdup(char *str); 
 {
 	char *k;
-	int i, n = 0;
+		unsigned int size;
 
-	if (str == NULL)
+	if (str == 0)
+	{
 		return (NULL);
+	}
 
-	while (str[n] != '\0')
-		n++;
+	size = _strlen(str) + 1;
 
-	k = (char *)malloc((sizeof(char) * n) + 1);
-	if (k == NULL)
+	k = (char *) malloc(size * sizeof(char));
+
+	if (k == 0)
+	{
 		return (NULL);
+	}
 
-	for (i = 0; i < n; i++)
-		k[i] = str[i];
-	 k[n] = '\0';
-
-        return (k);
+	_strcpy(k, str);
+	return (k);
 }
