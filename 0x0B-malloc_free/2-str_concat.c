@@ -12,29 +12,36 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	unsigned int len1 = s1 ? strlen(s1) : 0;
-	unsigned int len2 = s2 ? strlen(s2) : 0;
-	char *result = malloc(len1 + len2 + 1);
-	unsigned int i;
+	char *dst;
+	unsigned int i, j, size;
 
-	if (!result)
+	/*If the array is empty*/
+	if (s1 == NULL)
+		s1 = "";
+
+	if (s2 == NULL)
+		s2 = "";
+
+	/*count size total*/
+	size = (_strlen(s1) + _strlen(s2) + 1);
+
+	/*malloc*/
+	dst = (char *) malloc(size * sizeof(char));
+
+	if (dst == 0)
 	{
 		return (NULL);
 	}
-	if (s1)
+
+	/*Concatenate arrays*/
+	for (i = 0; *(s1 + i) != '\0'; i++)
+		*(dst + i) = *(s1 + i);
+
+	for (j = 0; *(s2 + j) != '\0'; j++)
 	{
-		for (i = 0; i < len1; i++)
-		{
-			result[i] = s1[i];
-		}
+		*(dst + i) = *(s2 + j);
+		i++;
 	}
-	if (s2)
-	{
-		for (i = 0; i < len2; i++)
-		{
-			result[len1 + i] = s2[i];
-		}
-	}
-	result[len1 + len2] = '\0';
-	return (result);
+
+	return (dst);
 }
