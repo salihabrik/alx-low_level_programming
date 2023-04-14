@@ -86,13 +86,13 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
-	larger = large_num(argv[1], argv[2]);
+	larger = larger_num(argv[1], argv[2]);
 
 	if (larger == 1)
 		t = mul_number(argv[1], argv[2]);
 	else
 		t = mul_number(argv[2], argv[1]);
 
-	printf("%lu\n", (atol(argv[1]) * atol(argv[2])));
+	printf("%lu\n", (atoi(argv[1]) * atoi(argv[2])));
 	return (0);
 }
