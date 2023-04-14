@@ -93,5 +93,6 @@ int main(int argc, char *argv[])
 	else
 		t = mul_number(argv[2], argv[1]);
 
+	printf("%lu\n", (atol(argv[1]) * atol(argv[2])));
 	return (0);
 }
