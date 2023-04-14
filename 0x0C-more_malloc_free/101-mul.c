@@ -1,5 +1,48 @@
 #include "main.h"
 
+#include <stdlib.h>
+#include <stdio.h>
+#include "main.h"
+/**
+ * is_digit - checks if a string contains a non-digit char
+ * @s: string to be evaluated
+ * Return: 0 if a non-digit is found, 1 otherwise
+ */
+int is_digit(char *s)
+{
+int c = 0;
+while (s[c])
+{
+if (s[c] < '0' || s[c] > '9')
+return (0);
+c++;
+}
+return (1);
+}
+/**
+ * _strlen - returns the length of a string
+ * @s: string to evaluate
+ * Return: the length of the string
+ */
+int _strlen(char *s)
+{
+int v = 0;
+while (s[v] != '\0')
+{
+v++;
+}
+return (v);
+}
+/**
+ * errors - handles errors for main
+ *
+ */
+void errors(void)
+{
+printf("Error\n");
+exit(98);
+}
+
 /**
  * main - multiply two numbers
  * @argc: number of arguments
