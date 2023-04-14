@@ -21,10 +21,19 @@ while (s1[size1] != '\0')
 {
 size1++;
 }
+while (s2[size2] != '\0')
+{
+size2++;
+}
 if (n > size2)
 n = size2;
 h = malloc((size1 + n + 1) * sizeof(char));
 if (h == NULL)
+return (0);
+for (i = 0; i < size1; i++)
+{
+h[i] = s1[i];
+}
 for (; i < (size1 + n); i++)
 {
 h[i] = s2[i - size1];
