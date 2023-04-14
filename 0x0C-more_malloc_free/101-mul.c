@@ -72,9 +72,9 @@ char *mul_number(char *n1, char *n2)
 int main(int argc, char *argv[])
 {
 	int larger, isNumbers;
-	char *t;
+	char *total;
 
-	(void) t;
+	(void) total;
 	if (argc != 3)
 	{
 		printf("Error\n");
@@ -89,9 +89,9 @@ int main(int argc, char *argv[])
 	larger = larger_num(argv[1], argv[2]);
 
 	if (larger == 1)
-		t = mul_number(argv[1], argv[2]);
+		total = mul_number(argv[1], argv[2]);
 	else
-		t = mul_number(argv[2], argv[1]);
+		total = mul_number(argv[2], argv[1]);
 
 	printf("%lu\n", (atoi(argv[1]) * atoi(argv[2])));
 	return (0);
