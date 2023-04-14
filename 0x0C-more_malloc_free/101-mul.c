@@ -40,3 +40,19 @@ void errors(void)
 printf("Error\n");
 exit(98);
 }
+isNumbers = is_number(argv[1]) +  is_number(argv[1]);
+if (isNumbers != 2)
+{
+	printf("Error\n");
+	exit(98);
+	}
+larger = larger_num(argv[1], argv[2]);
+
+if (larger == 1)
+	total = mul_number(argv[1], argv[2]);
+else
+	total = mul_number(argv[2], argv[1]);
+
+printf("%lu\n", (atol(argv[1]) * atol(argv[2])));
+return (0);
+}
