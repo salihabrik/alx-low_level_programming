@@ -86,7 +86,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
-	larger = larger_num(argv[1], argv[2]);
+	larger = large_num(argv[1], argv[2]);
 
 	if (larger == 1)
 		t = mul_number(argv[1], argv[2]);
