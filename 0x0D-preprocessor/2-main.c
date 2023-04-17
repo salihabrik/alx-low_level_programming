@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <libgen.h>
+
 /**
  *main - print the name of the file compiled from
  *
