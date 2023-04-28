@@ -1,8 +1,8 @@
 	extern	printf	; the C function, to be called
 
     section .data ; Data section
-    message db 'Hello, Holberton!', 0x0a, 0
-    format db '%s', 0x0a, 0
+    message db  "Hello, Holberton!",10
+    format db '%s', 10 , 0
 
 section .text
     global main
@@ -16,9 +16,11 @@ main:
     mov dword [rsp], format ; first argument is the format string
     mov qword [rsp+4], message ; second argument is the message string
     call printf
-
+	; function return
     mov rsp, rbp
     pop rbp
     xor eax, eax
     ret
+	section .data
+message: db  "Hello, Holberton" ;10
 
