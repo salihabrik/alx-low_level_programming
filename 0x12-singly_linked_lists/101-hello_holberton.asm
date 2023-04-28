@@ -2,9 +2,9 @@
 	extern	printf
 	global main
 
-    section .data ; Data section
-    message db  "Hello, Holberton!",10
-    format db '%s', 10 , 0
+section .data ; Data section
+message db  "Hello, Holberton!",10
+format db '%s', 10 , 0
 
 section .text
     global main
