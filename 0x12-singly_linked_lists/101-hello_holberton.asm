@@ -1,4 +1,6 @@
-	extern	printf	; the C function, to be called
+	bits 64
+	extern	printf
+	global main
 
     section .data ; Data section
     message db  "Hello, Holberton!",10
