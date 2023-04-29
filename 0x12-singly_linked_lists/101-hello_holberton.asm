@@ -1,28 +1,21 @@
-	bits 64
-	extern	printf
-	global main
+	extern	printf		; the C function, to be called
 
-section .data ; Data section
-message db  "Hello, Holberton!",10
-format db '%s', 10 , 0
+	        section .data		; Data section, initialized variables
+msg:		db "Hello, Holberton", 0 ; C string needs 0
+fmt:	    	db "%s", 10, 0          ; The printf format, "\n",'0'
 
-section .text
-    global main
-    extern printf
+	        section .text		; Code section.
 
-main:
-    push rbp
-    mov rbp, rsp
+	        global main		; the standard gcc entry point
+main:					; the program label for the entry point
+	        push    rbp		; set up stack frame, must be alligned
 
-    sub rsp, 8       ; reserve space for two 32-bit arguments
-    mov dword [rsp], format ; first argument is the format string
-    mov qword [rsp+4], message ; second argument is the message string
-    call printf
-	; function return
-    mov rsp, rbp
-    pop rbp
-    xor eax, eax
-    ret
-	section .data
-message: db  "Hello, Holberton" ;10
+		mov	rdi,fmt
+		mov	rsi,msg
+		mov	rax,0		; or can be  xor  rax,rax
+	        call    printf		; Call C function
 
+		pop	rbp		; restore stack
+
+		mov	rax,0		; normal, no error, return value
+		ret			; return
