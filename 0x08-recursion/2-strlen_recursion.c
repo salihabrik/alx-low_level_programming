@@ -1,4 +1,4 @@
-i#include "main.h"
+#include "main.h"
 /**
  * _strlen_recursion - length of string
  * @s:string
@@ -6,13 +6,13 @@ i#include "main.h"
  */
 int _strlen_recursion(char *s)
 {
-	int i = 0;
+	int n = 0;
 
 	if (*s)
 	{
-		i++;
-		i += _strlen_recursion(s + 1);
+		n++;
+		n += _strlen_recursion(s + 1);
 
 	}
-	return (i);
+	return (n);
 }
