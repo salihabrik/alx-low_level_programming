@@ -1,41 +1,48 @@
 #include "main.h"
-#include <fcntl.h>
 /**
- * Write a function 
- * reads a text file
- * prints it to the POSIX standard output.
- *@letters : l
- *@filname : b
+ *read_textfile - reads a text file and prints to POSIX stdout
+ *@filename: name to file to read
+ *@letters: the number of letter to read and print
  *
- *returns the actual number of letters it could read and print
- *
+ *Return: 0 if file cannot be opened and written to, also if filename is NULL
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int f;
-	ssize_t l;
-	char * b;
+	int f, i, j;
+	char *b;
 
-	if (filename == NULL )
-	{
+	if (filename == NULL)
 		return (0);
-	}
-	f = open (filename ,O_RDONLY);
+
+	f = open(filename, O_RDONLY);
+
 	if (f == -1)
 		return (0);
-	b = malloc(sizeof(char) * (letters + 1));
-	if (b == NULL)
+
+	b = malloc(sizeof(char) * letters);
+	if (!b)
 		return (0);
-	l = read(fd, buffer, letters);
-	if (l == -1)
+
+	i = read(f, b, letters);
+	if (i == -1)
 	{
-		free (b);
-		close (f);
+		free(b);
 		return (0);
 	}
-	printf (%s , b);
-	free (b);
-	close (f);
-	return (l):
+	b[i] = '\0';
+
+	close(f);
+
+	j = write(STDOUT_FILENO, b, i);
+	if (j == -1)
+	{
+		free(b);
+		return (0);
+	}
+
+	free(b);
+	return (j);
+
 }
+
 
