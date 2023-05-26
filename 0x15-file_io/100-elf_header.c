@@ -105,3 +105,34 @@ void print_type(uint16_t type)
             printf("<unknown>\n");
     }
 }
+void print_entry(uint64_t entry) {
+    printf("  Entry point address:               0x%lx\n", entry);
+}
+
+void read_elf_header(const char *filename) {
+    int fd = open(filename, O_RDONLY);
+    if (fd == -1) {
+        print_error("Cannot open file");
+    }
+
+    Elf64_Ehdr header;
+    if (read(fd, &header, sizeof(Elf64_Ehdr)) != sizeof(Elf64_Ehdr)) {
+        print_error("Cannot read ELF header");
+    }
+
+    close(fd);
+
+    printf("ELF Header:\n");
+    print_magic(header.e_ident);
+    print_class(header.e_ident[4]);
+    print_data(header.e_ident[5]);
+    print_version(header.e_version);
+    print_os_abi(header.e_ident[7]);
+    printf("  ABI Version: %d\n", header.e_ident[8]);
+    print_type(header.e_type);
+    print_entry(header.e_entry);
+}
+
+
+
+
