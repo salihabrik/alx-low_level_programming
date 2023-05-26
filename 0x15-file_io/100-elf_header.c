@@ -93,15 +93,7 @@ void print_type(uint16_t type)
 }
 
 
- int main(int argc, char *argv[]) 
- {
-    if (argc != 2) 
-    {
-        print_error("Usage: elf_header elf_filename");
-    }
-
-    read_elf_header(argv[1]);
-
+ 
 
     return 0;
 }   
