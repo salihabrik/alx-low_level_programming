@@ -70,7 +70,8 @@ void print_data(unsigned char data)
             printf("<unknown>\n");
     }
 }
-void print_os_abi(unsigned char os_abi) {
+void print_os_abi(unsigned char os_abi) 
+{
     printf("  OS/ABI: ");
     switch (os_abi) {
         case 0:
