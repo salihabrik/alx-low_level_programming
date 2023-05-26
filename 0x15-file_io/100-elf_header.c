@@ -105,10 +105,7 @@ void print_type(uint16_t type)
             printf("<unknown>\n");
     }
 }
-void print_entry(uint64_t entry)
- {
-    printf("  Entry point address:  0x%lx\n", entry);
-}
+
 
 void read_elf_header(const char *filename) 
 {
@@ -142,6 +139,7 @@ void read_elf_header(const char *filename)
     }
 
     read_elf_header(argv[1]);
+
 
     return 0;
 }   
