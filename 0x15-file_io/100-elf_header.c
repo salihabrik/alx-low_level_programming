@@ -89,7 +89,7 @@ void print_os_abi(unsigned char os_abi)
 }
 void print_type(uint16_t type) 
 {
-    printf("  Type:                              ");
+    printf("  Type:  ");
     switch (type) 
     {
         case 1:
@@ -105,11 +105,13 @@ void print_type(uint16_t type)
             printf("<unknown>\n");
     }
 }
-void print_entry(uint64_t entry) {
-    printf("  Entry point address:               0x%lx\n", entry);
+void print_entry(uint64_t entry)
+ {
+    printf("  Entry point address:  0x%lx\n", entry);
 }
 
-void read_elf_header(const char *filename) {
+void read_elf_header(const char *filename) 
+{
     int fd = open(filename, O_RDONLY);
     if (fd == -1) {
         print_error("Cannot open file");
@@ -132,7 +134,17 @@ void read_elf_header(const char *filename) {
     print_type(header.e_type);
     print_entry(header.e_entry);
 }
+ int main(int argc, char *argv[]) 
+ {
+    if (argc != 2) 
+    {
+        print_error("Usage: elf_header elf_filename");
+    }
 
+    read_elf_header(argv[1]);
+
+    return 0;
+}   
 
 
 
