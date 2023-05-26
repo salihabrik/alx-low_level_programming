@@ -93,10 +93,6 @@ void print_type(uint16_t type)
 }
 
 
-void read_elf_header(const char *filename) 
-{
-    int fd = open(filename, O_RDONLY);
-    if (fd == -1) {
  int main(int argc, char *argv[]) 
  {
     if (argc != 2) 
