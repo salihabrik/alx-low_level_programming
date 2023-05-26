@@ -55,3 +55,18 @@ void print_class(unsigned char class)
             printf("<unknown>\n");
     }
 }
+void print_data(unsigned char data)
+{
+    printf("  Data: ");
+    switch (data)
+    {
+        case 1:
+            printf("2's complement, little endian\n");
+            break;
+        case 2:
+            printf("2's complement, big endian\n");
+            break;
+        default:
+            printf("<unknown>\n");
+    }
+}
