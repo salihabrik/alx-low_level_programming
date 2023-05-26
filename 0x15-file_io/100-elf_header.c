@@ -6,7 +6,8 @@
 
 #define EI_NIDENT 16
 
-typedef struct {
+typedef struct
+{
     unsigned char e_ident[EI_NIDENT];
     uint16_t e_type;
     uint16_t e_machine;
@@ -21,16 +22,19 @@ typedef struct {
     uint16_t e_shentsize;
     uint16_t e_shnum;
     uint16_t e_shstrndx;
-} Elf64_Ehdr;
+} 
 
-void print_error(const char *message) {
+void print_error(const char *message)
+{
     fprintf(stderr, "Error: %s\n", message);
     exit(98);
 }
 
-void print_magic(unsigned char *magic) {
+void print_magic(unsigned char *magic)
+{
     printf("  Magic:   ");
-    for (int i = 0; i < EI_NIDENT; i++) {
+    for (int i = 0; i < EI_NIDENT; i++) 
+    {
         printf("%02x ", magic[i]);
     }
     printf("\n");
