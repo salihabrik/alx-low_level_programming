@@ -88,8 +88,7 @@ void print_type(uint16_t type)
             printf("DYN (Shared object file)\n");
             break;
         default:
-            printf("<unknown>\n");
-    }
+        
 }
 
 
