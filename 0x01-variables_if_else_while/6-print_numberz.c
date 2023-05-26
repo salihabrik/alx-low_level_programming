@@ -5,7 +5,7 @@
 /**
  * main - Entry point
  *
- * Description: this is the main funchtion
+ * Description: this is the main function
  * Dvariablel n each time it is executed.
  * its stord in n is pos
  *
