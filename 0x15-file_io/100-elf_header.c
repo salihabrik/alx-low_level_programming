@@ -97,7 +97,6 @@ void read_elf_header(const char *filename)
 {
     int fd = open(filename, O_RDONLY);
     if (fd == -1) {
-        print_error
  int main(int argc, char *argv[]) 
  {
     if (argc != 2) 
