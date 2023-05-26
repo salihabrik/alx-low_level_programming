@@ -97,15 +97,7 @@ void read_elf_header(const char *filename)
 {
     int fd = open(filename, O_RDONLY);
     if (fd == -1) {
-        print_error("Cannot open file");
-    }
-
-    Elf64_Ehdr header;
-    if (read(fd, &header, sizeof(Elf64_Ehdr)) != sizeof(Elf64_Ehdr)) {
-        print_error("Cannot read ELF header");
-    }
-
-    clos
+        print_error
  int main(int argc, char *argv[]) 
  {
     if (argc != 2) 
