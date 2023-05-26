@@ -72,21 +72,7 @@ void print_data(unsigned char data)
 }
 void print_os_abi(unsigned char os_abi) 
 {
-    printf("  OS/ABI: ");
-    switch (os_abi) {
-        case 0:
-            printf("UNIX - System V\n");
-            break;
-        case 3:
-            printf("UNIX - NetBSD\n");
-            break;
-        case 6:
-            printf("UNIX - Solaris\n");
-            break;
-        default:
-            printf("<unknown: %d>\n", os_abi);
-    }
-}
+    printf("  OS
 void print_type(uint16_t type) 
 {
     printf("  Type:  ");
