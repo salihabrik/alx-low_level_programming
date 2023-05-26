@@ -105,18 +105,7 @@ void read_elf_header(const char *filename)
         print_error("Cannot read ELF header");
     }
 
-    close(fd);
-
-    printf("ELF Header:\n");
-    print_magic(header.e_ident);
-    print_class(header.e_ident[4]);
-    print_data(header.e_ident[5]);
-    print_version(header.e_version);
-    print_os_abi(header.e_ident[7]);
-    printf("  ABI Version: %d\n", header.e_ident[8]);
-    print_type(header.e_type);
-    print_entry(header.e_entry);
-}
+    clos
  int main(int argc, char *argv[]) 
  {
     if (argc != 2) 
