@@ -70,3 +70,37 @@ void print_data(unsigned char data)
             printf("<unknown>\n");
     }
 }
+void print_os_abi(unsigned char os_abi) {
+    printf("  OS/ABI: ");
+    switch (os_abi) {
+        case 0:
+            printf("UNIX - System V\n");
+            break;
+        case 3:
+            printf("UNIX - NetBSD\n");
+            break;
+        case 6:
+            printf("UNIX - Solaris\n");
+            break;
+        default:
+            printf("<unknown: %d>\n", os_abi);
+    }
+}
+void print_type(uint16_t type) 
+{
+    printf("  Type:                              ");
+    switch (type) 
+    {
+        case 1:
+            printf("REL (Relocatable file)\n");
+            break;
+        case 2:
+            printf("EXEC (Executable file)\n");
+            break;
+        case 3:
+            printf("DYN (Shared object file)\n");
+            break;
+        default:
+            printf("<unknown>\n");
+    }
+}
