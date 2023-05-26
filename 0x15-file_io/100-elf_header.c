@@ -36,3 +36,18 @@ void print_magic(unsigned char *magic) {
     printf("\n");
 }
 
+void print_class(unsigned char class) 
+{
+    printf("  Class:                             ");
+    switch (class)
+    {
+        case 1:
+            printf("ELF32\n");
+            break;
+        case 2:
+            printf("ELF64\n");
+            break;
+        default:
+            printf("<unknown>\n");
+    }
+}
