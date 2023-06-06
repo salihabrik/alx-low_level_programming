@@ -7,4 +7,23 @@
  */
 
 int check_cycle(listint_t *list);
+{
+	if (list == NULL)
+ 	{
+        return (0);
+        }
 
+	listint_t *bigin = list;
+	listint_t *dernier = list;
+
+	while (dernier != NULL && dernier->next != NULL)
+ 	{
+        	begin = begin->next;
+        	dernier = dernier->next->next;
+
+        	if (begin == dernier) 
+		{
+            		return (1);
+        	}
+	}   
+}
