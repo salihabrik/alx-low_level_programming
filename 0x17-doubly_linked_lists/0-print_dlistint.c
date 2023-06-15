@@ -3,7 +3,11 @@
  *print_dlistint - counts the number 
  *@h: head pointer
  *
+<<<<<<< HEAD
  *Return: the number pf elements
+=======
+ *Return: number of elem
+>>>>>>> 56278ef42a4fbac4729febcf30096b6b475d7242
  */
 
 size_t print_dlistint(const dlistint_t *h)
@@ -21,4 +25,8 @@ size_t print_dlistint(const dlistint_t *h)
 	}
 
 	return (count);
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 56278ef42a4fbac4729febcf30096b6b475d7242
