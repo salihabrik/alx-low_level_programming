@@ -1,9 +1,9 @@
 #include "lists.h"
 
 /**
- * add_dnodeint_end - adds a new node 
- * @head: double pointer 
- * @n: data to insert 
+ * add_dnodeint_end - adds a new node
+ * @head: double pointer
+ * @n: data to insert
  *
  * Return: the address of the new element, or NULL
  */
