@@ -34,8 +34,4 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n);
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index);
 
 
-<<<<<<< HEAD
 #endif 
-=======
-#endif 
->>>>>>> 56278ef42a4fbac4729febcf30096b6b475d7242
