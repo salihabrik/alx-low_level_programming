@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- *print_dlistint - counts the number 
+ *print_dlistint - count
  *@h: head pointer
  *
  *Return: number of elem
