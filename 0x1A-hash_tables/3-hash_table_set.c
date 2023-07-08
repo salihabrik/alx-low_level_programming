@@ -2,7 +2,7 @@
 
 /**
  * hash_table_set - Adds an element to the hash table
- * @ht: The hash table 
+ * @ht: The hash table to add/update the key/value to
  * @key: The key string
  * @value: The value
  *
@@ -50,6 +50,5 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	ht->array[index] = new_node;
 
 	return (1);
-	
 }
 
