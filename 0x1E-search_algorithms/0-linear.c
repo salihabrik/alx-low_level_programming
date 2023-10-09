@@ -11,7 +11,7 @@
  *
  * Return: The first index where the value is located, or -1 if not found.
  */
- 
+
 int linear_search(int *array, size_t size, int value)
 {
     size_t i;
@@ -23,7 +23,7 @@ int linear_search(int *array, size_t size, int value)
     {
         printf("Value checked array[%lu] = [%d]\n", i, array[i]);
         if (array[i] == value)
-            return (i);
+        return (i);
     }
 
     return (-1);
