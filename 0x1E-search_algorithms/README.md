@@ -88,10 +88,9 @@ int main() {
 
 
 
-```
+
 AUTHORS
 
 - [salihabrik](https://github.com/salihabrik)
--
 
-```
+
