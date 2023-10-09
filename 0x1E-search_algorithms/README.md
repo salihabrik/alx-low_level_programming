@@ -43,7 +43,7 @@ int main() {
 }
 
 
-```
+
 ## Binary Search
 
 Binary search is a more efficient search algorithm, particularly for sorted collections. It works by repeatedly dividing the search interval in half until the desired element is found. This algorithm is much faster than linear search for large datasets.
@@ -94,7 +94,7 @@ Space complexity is a measure of the amount of working storage an algorithm need
 
 Space complexity is often expressed in terms of big O notation, which is a mathematical notation used to describe the limiting behavior of a function when the argument tends towards a particular value or infinity. For example, an algorithm that requires O(n) space would need to allocate n bytes of memory.
 
-```
+``````
 
 #include <stdio.h>
 
@@ -112,4 +112,4 @@ int main() {
 }
 
 
-```
+``````
