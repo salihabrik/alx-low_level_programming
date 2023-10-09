@@ -91,7 +91,7 @@ int main() {
 ```
 AUTHORS
 
-- [SALIHA BRIK](https://github.com/salihabrik)
-- GITHUB: [@salihabrik](https://github.com/salihabrik)
+- [salihabrik](https://github.com/salihabrik)
+-
 
 ```
