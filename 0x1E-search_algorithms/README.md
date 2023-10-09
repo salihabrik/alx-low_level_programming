@@ -51,9 +51,10 @@ Binary search is a more efficient search algorithm, particularly for sorted coll
 Usage (C)
 Here's an example of binary search implemented in C:
 
-<span style="color:black">
+
 
 ``````
+<span style="color:black">
 #include <stdio.h>
 
 int binary_search(int arr[], int size, int target) {
@@ -84,6 +85,8 @@ int main() {
     
     return 0;
 }
+
+</span>
 ``````
 ## Space Complexity in C
 
@@ -107,3 +110,4 @@ int main() {
     return 0;
 }
 
+</span>
