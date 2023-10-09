@@ -16,7 +16,7 @@ Linear search, also known as sequential search, is a simple search algorithm tha
 
 Here's an example of linear search implemented in C:
 
-```c
+```
 #include <stdio.h>
 
 int linear_search(int arr[], int size, int target) {
@@ -54,7 +54,7 @@ Here's an example of binary search implemented in C:
 
 
 ``````
-<span style="color:black">
+
 #include <stdio.h>
 
 int binary_search(int arr[], int size, int target) {
@@ -86,15 +86,16 @@ int main() {
     return 0;
 }
 
-</span>
+
 ``````
 ## Space Complexity in C
 
 Space complexity is a measure of the amount of working storage an algorithm needs. It is one of the most important factors to consider when choosing an algorithm because it can have a significant impact on the efficiency of a program. In C, space complexity is usually expressed in terms of the number of bytes required to store the data. For example, an algorithm that requires O(n) space would need to allocate n bytes of memory.
 
 Space complexity is often expressed in terms of big O notation, which is a mathematical notation used to describe the limiting behavior of a function when the argument tends towards a particular value or infinity. For example, an algorithm that requires O(n) space would need to allocate n bytes of memory.
+
 ```
-<span style="color:black">
+
 #include <stdio.h>
 
 int main() {
@@ -110,5 +111,5 @@ int main() {
     return 0;
 }
 
-</span>
+
 ```
